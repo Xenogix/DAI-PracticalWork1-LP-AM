@@ -14,6 +14,7 @@ import java.io.IOException;
 public class JsonToXMLConverter implements IConverterBase<JsonToXMLParameters> {
     @Override
     public boolean Convert(String inputFile, String outputFile, JsonToXMLParameters parameters) throws IOException {
+
         // Create an instance of ObjectMapper for JSON
         ObjectMapper jsonMapper = new ObjectMapper();
 
@@ -22,7 +23,7 @@ public class JsonToXMLConverter implements IConverterBase<JsonToXMLParameters> {
 
         // Create an instance of XmlMapper for XML and configure indentation and info
         XmlMapper xmlMapper = new XmlMapper();
-        xmlMapper.configure(SerializationFeature.INDENT_OUTPUT, true);
+        xmlMapper.configure(SerializationFeature.INDENT_OUTPUT, parameters.formattingParameters.indentation);
         xmlMapper.configure(ToXmlGenerator.Feature.WRITE_XML_DECLARATION, true);
         xmlMapper.configure(ToXmlGenerator.Feature.WRITE_XML_1_1, true);
 
