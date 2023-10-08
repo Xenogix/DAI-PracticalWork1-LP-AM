@@ -1,16 +1,20 @@
 package ch.heigvd.commands;
 
 import ch.heigvd.converters.XMLToJsonConverter;
+import ch.heigvd.parameters.FileIOParameters;
 import ch.heigvd.parameters.XMLToJsonParameters;
 import picocli.CommandLine;
 
+import java.io.IOException;
+
 @CommandLine.Command(name = "XMLToJson", version = "XMLToJson 0.1", mixinStandardHelpOptions = true)
 public class XMLToJsonCommand implements Runnable  {
-    @CommandLine.Option(names = { "-f", "--file" }, paramLabel = "File", description = "XML file to process")
-    String inputFile;
 
-    @CommandLine.Option(names = { "-o", "--output" }, paramLabel = "Output", description = "Json file to output")
-    String outputFile;
+    @CommandLine.Mixin
+    private FileIOParameters fileIOParameters;
+
+    @CommandLine.Mixin
+    private  XMLToJsonParameters xmlToJsonParameters;
 
     @Override
     public void run() {
@@ -18,9 +22,13 @@ public class XMLToJsonCommand implements Runnable  {
     }
 
     public boolean executeConversion() {
-        XMLToJsonParameters parameters = new XMLToJsonParameters();
-        XMLToJsonConverter converter = new XMLToJsonConverter();
-        System.out.println("Everything went as excepted in XML to Json");
-        return false;
+        try {
+            XMLToJsonConverter converter = new XMLToJsonConverter();
+            return converter.Convert(fileIOParameters.inputFile, fileIOParameters.outputFile, xmlToJsonParameters);
+        }
+        catch (IOException ioException) {
+            System.out.println(ioException.getMessage());
+            return false;
+        }
     }
 }
