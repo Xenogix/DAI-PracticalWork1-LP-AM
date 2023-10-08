@@ -4,6 +4,7 @@ import ch.heigvd.abstractions.IConverterBase;
 import ch.heigvd.parameters.XMLToJsonParameters;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 
 import java.io.File;
@@ -27,6 +28,10 @@ public class XMLToJsonConverter implements IConverterBase<XMLToJsonParameters> {
 
         // Create an instance of ObjectMapper for JSON
         ObjectMapper jsonMapper = new ObjectMapper();
+
+        // Json indented or not
+        if(parameters.formattingParameters.indentation)
+            jsonMapper.enable(SerializationFeature.INDENT_OUTPUT);
 
         // Convert the JsonNode to a JSON string and write it to a file
         jsonMapper.writeValue(new File(outputFile), rootNode);
