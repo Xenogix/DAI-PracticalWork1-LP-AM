@@ -19,6 +19,8 @@ public class JsonToXMLCommand implements Runnable {
     @Override
     public void run() {
         boolean wasSuccessful = executeConversion();
+        if(!wasSuccessful) System.out.println("The conversion from Json to XML failed unexpectedly");
+        else System.out.println("The conversion from Json to XML was done successfully");
     }
 
     public boolean executeConversion() {
