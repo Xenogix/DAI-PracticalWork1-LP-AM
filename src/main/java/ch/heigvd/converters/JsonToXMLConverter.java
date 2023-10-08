@@ -2,7 +2,6 @@ package ch.heigvd.converters;
 
 import ch.heigvd.abstractions.IConverterBase;
 import ch.heigvd.parameters.JsonToXMLParameters;
-import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
