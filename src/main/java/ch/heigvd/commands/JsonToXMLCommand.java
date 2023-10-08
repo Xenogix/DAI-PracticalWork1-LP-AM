@@ -24,7 +24,8 @@ public class JsonToXMLCommand implements Runnable {
     public boolean executeConversion() {
         try {
             JsonToXMLConverter converter = new JsonToXMLConverter();
-            return converter.Convert(fileIOParameters.inputFile, fileIOParameters.outputFile, jsonToXMLParameters);
+            converter.Convert(fileIOParameters.inputFile, fileIOParameters.outputFile, jsonToXMLParameters);
+            return true;
         }
         catch (IOException ioException) {
             System.out.println(ioException.getMessage());
