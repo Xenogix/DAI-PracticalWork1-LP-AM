@@ -1,0 +1,19 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<ObjectNode>
+  <books>
+    <title>Java Programming</title>
+    <author>John Doe</author>
+    <price>29.99</price>
+    <Ok>
+      <test>autres</test>
+      <test2>ok</test2>
+    </Ok>
+  </books>
+  <books>
+    <title>Web Development</title>
+    <author>Jane Smith</author>
+    <price>
+      <test>ok</test>
+    </price>
+  </books>
+</ObjectNode>
