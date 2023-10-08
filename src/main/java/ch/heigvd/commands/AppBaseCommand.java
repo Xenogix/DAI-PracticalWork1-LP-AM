@@ -4,6 +4,9 @@ import picocli.CommandLine;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * Class that encapsulate commands logic
+ */
 @CommandLine.Command(name = "JConvert",
         subcommands = { XMLToJsonCommand.class, JsonToXMLCommand.class, CommandLine.HelpCommand.class },
         description = "Converts from or to Json for the given file format")
@@ -16,6 +19,12 @@ public class AppBaseCommand {
         System.exit(exitCode);
     }
 
+    /**
+     * Execute the user input
+     *
+     * @param parseResult The parse result from which to select one or more CommandSpec instances to execute.
+     * @return An exit code
+     */
     private int executionStrategy(CommandLine.ParseResult parseResult) {
         long startNanoTime = System.nanoTime();
         int exitCode = new CommandLine.RunLast().execute(parseResult);
@@ -24,6 +33,12 @@ public class AppBaseCommand {
         return exitCode;
     }
 
+    /**
+     * Get the elapsed time of the execution
+     *
+     * @param nanoElapsedTime The time to execute the command
+     * @return A string to display
+     */
     private String getElapsedTimeToShow(long nanoElapsedTime)
     {
         String result = "Time elapsed : ";
