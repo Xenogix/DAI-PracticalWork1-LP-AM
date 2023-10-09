@@ -10,9 +10,15 @@ import com.fasterxml.jackson.dataformat.xml.XmlMapper;
 import java.io.File;
 import java.io.IOException;
 
+/**
+ * Class to convert an XML file to a Json file
+ */
 public class XMLToJsonConverter implements IConverterBase<XMLToJsonParameters> {
+    /**
+     * @see IConverterBase
+     */
     @Override
-    public boolean Convert(String inputFile, String outputFile, XMLToJsonParameters parameters) throws IOException {
+    public void Convert(String inputFile, String outputFile, XMLToJsonParameters parameters) throws IOException {
 
         // Create an instance of ObjectMapper for XML
         XmlMapper xmlMapper = new XmlMapper();
@@ -29,7 +35,5 @@ public class XMLToJsonConverter implements IConverterBase<XMLToJsonParameters> {
 
         // Convert the JsonNode to a JSON string and write it to a file
         jsonMapper.writeValue(new File(outputFile), rootNode);
-
-        return true;
     }
 }

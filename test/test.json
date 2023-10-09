@@ -1,0 +1,20 @@
+{
+    "books":[
+        {
+            "title":"Java Programming",
+            "author":"John Doe",
+            "price":"29.99",
+            "Ok":{
+                "test":"autres",
+                "test2":"ok"
+            }
+        },
+        {
+            "title":"Web Development",
+            "author":"Jane Smith",
+            "price":{
+                "test":"ok"
+            }
+        }
+    ]
+}
