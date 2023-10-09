@@ -1,9 +1,9 @@
 # DAI Practical work 1
 
-## Authors :
+## Authors
 [Polien Lionel](https://github.com/polionel) and [Menétrey Arthur](https://github.com/xenogix)
 
-## User guide :
+## User guide
 This software is a Java-based CLI that allows you to convert a Json file into XML and vice versa, and therefore includes the following commands :
 
 | Command   |           Purpose           |
@@ -47,7 +47,7 @@ The conversion from Json to XML failed unexpectedly
 Time elapsed : 156ms
 ```
 
-## Commands parameters :
+## Commands parameters
 
 | Name |   FullName    | Purpose                                                   |
 |:-----|:-------------:|:----------------------------------------------------------|
