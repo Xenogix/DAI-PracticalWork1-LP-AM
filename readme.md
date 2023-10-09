@@ -4,7 +4,7 @@
 [Polien Lionel](https://github.com/polionel) and [Menétrey Arthur](https://github.com/xenogix)
 
 ## User guide :
-This software is a java based CLI which allows you to convert a Json file to XML and vice versa and thus include the following commands :
+This software is a Java-based CLI that allows you to convert a Json file into XML and vice versa, and therefore includes the following commands :
 
 | Command   |           Purpose           |
 |:----------|:---------------------------:|
@@ -12,15 +12,17 @@ This software is a java based CLI which allows you to convert a Json file to XML
 | JsonToXML | Converts a Json file to XML |
 | help      | Shows the list of commands  |
 
-In order to use the program you can use [the compiled .jar](build/JConvert_20231008_release.jar) file and run it as it follows or clone this repo and build it yourself
+In order to run the program you can download [the compiled .jar file](build/JConvert_20231008_release.jar) or clone this repo and build it yourself using maven.
 
 Then run the following command in a command prompt taking care of filling the placeholders :
 
 ```
-java -jar [file path of the buid] [XMLToJson/JsonToXML] -f [inputFile] -o [outputFile]
+java -jar [file path of the compiled .jar] [XMLToJson/JsonToXML] -f [inputFile] -o [outputFile]
 ```
 
-If the conversion was done successfully you should get a resul similar to this :
+If the conversion was done successfully you should get a result similar to this :
+
+<sup>(In the following examples we are using the JsonToXML command)</sup>
 
 ```
 The conversion from Json to XML was done successfully
