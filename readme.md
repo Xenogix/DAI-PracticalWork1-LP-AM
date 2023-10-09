@@ -63,7 +63,7 @@ By default, the generated output file is indented but this can be specified usin
 
 In order to build this project manually you need to install [maven](https://maven.apache.org/) and complete [the installation process](https://maven.apache.org/install.html).
 
-If you need to troubleshoot when trying to install of maven, we reccommand you to directly check on their website. [Maven Getting started Guide](https://maven.apache.org/guides/getting-started/index.html)
+If you need to troubleshoot when trying to install of maven, we recommend you to directly check on their website. [Maven Getting started Guide](https://maven.apache.org/guides/getting-started/index.html)
 
 After the installation completed, open a command prompt in the root folder of the project and type the following command in order to build the project to a JAR file including all the depedencies.
 
