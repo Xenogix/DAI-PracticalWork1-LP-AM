@@ -59,3 +59,29 @@ Time elapsed : 156ms
 
 By default, the generated output file is indented but this can be specified using the indentation parameter.
 
+### Build the project using Maven
+
+In order to build this project manually you need to install [maven](https://maven.apache.org/) and complete [the installation process](https://maven.apache.org/install.html)
+
+If you need to troubleshoot when trying to install of maven, we reccommand you to directly check on their website. [Maven Getting started Guide](https://maven.apache.org/guides/getting-started/index.html)
+
+After the installation completed, open a command prompt in the root of the project and type the following command in order to build the project to a JAR file including all the depedencies.
+
+```
+Enter command here
+```
+
+If the process was successfull, you will find the compiled JAR file in the project "Target" directory.
+
+
+### Depedencies
+
+This project was built and tested using the following depedencies. Feel free to use other versions of the depedencies but keep in mind this could cause errors when building / running the program. You can edit the depedencies in the [pom.xml](pom.xml) file
+
+| Depedency              |   URL                                                                                      | Version |
+|:-----------------------|:-------------------------------------------------------------------------------------------|:-------:|
+| picocli                | https://mvnrepository.com/artifact/info.picocli/picocli                                    | 4.7.5   |
+| jackson-dataformat-xml | https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml | 2.15.2  |
+| jackson-databind       | https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind             | 2.15.2  |
+
+
