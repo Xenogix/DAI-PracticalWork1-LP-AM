@@ -38,7 +38,7 @@ Time elapsed : 115ms
 ```
 
 In the case of a Json / XML parsing error, the specific line and column causing the error will be specified allowing you to debug your file more easily.
-In this example we tried to convert an XML file to Json with the wrong command (JsonToXML)
+In this example we tried to convert an XML file to Json with the wrong command (JsonToXML) :
 
 ```
 Unexpected character ('<' (code 60)): expected a valid value (JSON String, Number, Array, Object or token 'null', 'true' or 'false')
@@ -47,7 +47,7 @@ The conversion from Json to XML failed unexpectedly
 Time elapsed : 156ms
 ```
 
-### Commands parameters :
+## Commands parameters :
 
 | Name |   FullName    | Purpose                                                   |
 |:-----|:-------------:|:----------------------------------------------------------|
@@ -59,24 +59,30 @@ Time elapsed : 156ms
 
 By default, the generated output file is indented but this can be specified using the indentation parameter.
 
-### Build the project using Maven
+## Build the project using Maven
 
-In order to build this project manually you need to install [maven](https://maven.apache.org/) and complete [the installation process](https://maven.apache.org/install.html)
+In order to build this project manually you need to install [maven](https://maven.apache.org/) and complete [the installation process](https://maven.apache.org/install.html).
 
 If you need to troubleshoot when trying to install of maven, we reccommand you to directly check on their website. [Maven Getting started Guide](https://maven.apache.org/guides/getting-started/index.html)
 
-After the installation completed, open a command prompt in the root of the project and type the following command in order to build the project to a JAR file including all the depedencies.
+After the installation completed, open a command prompt in the root folder of the project and type the following command in order to build the project to a JAR file including all the depedencies.
+
+Note that a JAR containing only the classes and code of the project is built, whose name begins with "original".
+In order to run the CLI you need to use the "executable" version and not the "original" one.
 
 ```
-Enter command here
+mvn dependency:resolve clean compile package
 ```
+<sup>Note that you need to be in the project's root folder in order for it to work</sup>
+<sup>(you can use the command "cd [path]" to select a location on most common OS</sup>
 
-If the process was successfull, you will find the compiled JAR file in the project "Target" directory.
+If the process was successfull, you will find the compiled JAR file in the project "target" directory.
 
 
-### Depedencies
+## Depedencies
 
-This project was built and tested using the following depedencies. Feel free to use other versions of the depedencies but keep in mind this could cause errors when building / running the program. You can edit the depedencies in the [pom.xml](pom.xml) file
+This project was built and tested using the following depedencies. Feel free to use other versions of the depedencies 
+but keep in mind this could cause errors when building / running the program. You can edit the depedencies in the [pom.xml](pom.xml) file
 
 | Depedency              |   URL                                                                                      | Version |
 |:-----------------------|:-------------------------------------------------------------------------------------------|:-------:|
